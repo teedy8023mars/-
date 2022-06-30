@@ -11,11 +11,10 @@ class Solution:
         def dfs(n,l,r,s):
             if (l==n and r==n):
                 res.append(s)
-            else:
-                if l<n:
-                    dfs(n,l+1,r,s+'(')
-                if (r<n and r<l):
-                    dfs(n,l,r+1,s+')')
+            if l<n:
+                dfs(n,l+1,r,s+'(')
+            if (r<n and r<l):
+                dfs(n,l,r+1,s+')')
         dfs(n,0,0,'')
         return res
 # @lc code=end
