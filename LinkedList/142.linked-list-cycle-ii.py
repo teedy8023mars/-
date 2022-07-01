@@ -10,10 +10,10 @@
 #     def __init__(self, x):
 #         self.val = x
 #         self.next = None
+#         self.flat = False
 
 class Solution:
     def detectCycle(self, head: Optional[ListNode]) -> Optional[ListNode]:
-        
         slow = fast = head
         while fast and fast.next:
             fast = fast.next.next
@@ -26,5 +26,6 @@ class Solution:
                     q = q.next 
                 return p
         return None
+
 # @lc code=end
 
