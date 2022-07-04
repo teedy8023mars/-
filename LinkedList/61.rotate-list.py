@@ -24,9 +24,9 @@ class Solution:
         # now it's a circular linked list
         last.next = head
         temp = head 
-        for _ in range(length-k-1):
+        for _ in range(length-k):
             temp = temp.next 
-        answer = temp.next 
+        answer = temp
         temp.next = None 
         return answer
         
