@@ -6,16 +6,20 @@
 
 # @lc code=start
 class Solution:
-    def generateParenthesis(self, n: int) -> List[str]:
+    def generateParenthesis(self, n) -> List[str]:
+        if n <= 0: return []
         res = []
-        def dfs(n,l,r,s):
-            if (l==n and r==n):
-                res.append(s)
-            if l<n:
-                dfs(n,l+1,r,s+'(')
-            if (r<n and r<l):
-                dfs(n,l,r+1,s+')')
-        dfs(n,0,0,'')
+
+        def dfs(paths, left, right):
+            if left>n or right>left:return 
+            if len(paths)==n*2:
+                res.append(paths)
+                return 
+            dfs(paths+'(', left+1, right)
+            dfs(paths+')', left, right+1)
+        dfs('',0,0)
         return res
+
+
 # @lc code=end
 
