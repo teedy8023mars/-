@@ -7,18 +7,19 @@
 # @lc code=start
 class Solution:
     def generateParenthesis(self, n) -> List[str]:
-        if n <= 0: return []
-        res = []
-
-        def dfs(paths, left, right):
-            if left>n or right>left:return 
-            if len(paths)==n*2:
-                res.append(paths)
-                return 
-            dfs(paths+'(', left+1, right)
-            dfs(paths+')', left, right+1)
-        dfs('',0,0)
+        res = [] 
+        def dfs(n, lc, rc, s): 
+            if(lc == n) and (rc == n):
+                res.append(s) 
+            else:
+                if (rc < n) and (rc < lc):
+                    dfs(n, lc, rc+1, s+')')
+                if lc < n:
+                    dfs(n, lc+1, rc, s+'(')
+        # n=3
+        dfs (n,0,0,"")
         return res
+
 
 
 # @lc code=end
