@@ -12,7 +12,7 @@ class Solution:
         for i,v in enumerate(nums):
             r = target - v 
             if r in seen:
-                return [i, seen[r]]
+                return [seen[r],i]
             else:
                 seen[v] = i
         # """ Brute force """
