@@ -8,8 +8,8 @@
 class Solution:
     def intersection(self, nums1: List[int], nums2: List[int]) -> List[int]:
         ret=[]
-        for i in nums1:
-            if i not in ret and i in nums2:
+        for i in nums2:
+            if i not in ret and i in nums1:
                 ret.append(i)
         return ret
 
