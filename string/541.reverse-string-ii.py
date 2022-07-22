@@ -10,7 +10,6 @@ class Solution:
         def rev(res):
             left, right = 0, len(res)-1
             while left < right:
-                res = list(res)
                 res[left], res[right] = res[right],res[left]
                 left += 1
                 right -= 1
