@@ -14,10 +14,5 @@ class Solution:
             start,destination = destination,start
         v = sum(distance[start:destination])
         return min(v, sum(distance)-v)
-        
-        
-        
-            
-            
 # @lc code=end
 

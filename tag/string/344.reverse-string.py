@@ -10,12 +10,12 @@ class Solution:
         """
         Do not return anything, modify s in-place instead.
         """
-        # left, right = 0, len(r)-1
-        # while left<right:
-        #     r[left], r[right] = r[right], r[left]
-        #     left += 1
-        #     right -= 1
-        return r[::-1]
+        left, right = 0, len(r) - 1
+        while left < right:
+            r[left], r[right] = r[right],r[left]
+            left += 1
+            right -= 1
+        return ''.join(r)    
 
 # @lc code=end
 
