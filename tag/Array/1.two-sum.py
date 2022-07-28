@@ -7,6 +7,7 @@
 # @lc code=start
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
+        """solution 1"""
         # seen = {}
         # for i,v in enumerate(nums):
         #     r = target - v
@@ -14,6 +15,7 @@ class Solution:
         #         return [i,seen[r]] 
         #     else:
         #         seen[v] = i
+        """solution 2"""
         for i in range(len(nums)):
             for j in range(i+1,len(nums)):
                 if target - nums[j] == nums[i]:
