@@ -7,8 +7,8 @@
 # @lc code=start
 class Solution:
     def reverseStr(self, s: str, k: int) -> str:
-        for i in range(1,len(s),2*k):
-            print(s[i])
-            
+        if len(s)<k: return s[::-1]
+        if len(s)<2*k : return s[:k][::-1]+s[k:]
+        return s[:k][::-1] + s[k:2*k] + self.reverseStr(s[2*k:],k)
 # @lc code=end
 
