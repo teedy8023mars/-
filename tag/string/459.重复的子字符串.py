@@ -11,9 +11,5 @@ from urllib.request import AbstractBasicAuthHandler
 class Solution:
     def repeatedSubstringPattern(self, s: str) -> bool:
         return s in  "".join((s[1:],s))
-        print(s)
-# a bcabcabcab c
-
-# a cbabcacbab c
 # @lc code=end
 
