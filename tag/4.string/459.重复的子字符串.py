@@ -5,11 +5,9 @@
 #
 
 # @lc code=start
-from urllib.request import AbstractBasicAuthHandler
-
 
 class Solution:
     def repeatedSubstringPattern(self, s: str) -> bool:
-        return s in  "".join((s[1:],s))
+        return s in  "".join((s[1:],s[:-1]))
 # @lc code=end
 
