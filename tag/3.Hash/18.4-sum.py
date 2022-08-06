@@ -3,8 +3,6 @@
 #
 # [18] 4Sum
 #
-from bigO import BigO
-from bigO import algorithm
 # @lc code=start
 class Solution:
     def fourSum(self, nums: List[int], target: int) -> List[List[int]]:
@@ -26,7 +24,6 @@ class Solution:
                         while left < right and nums[left]==nums[left+1]:
                             left += 1
                         left += 1
-        print(self.fourSum().test)
         return ret
                 
 # @lc code=end
