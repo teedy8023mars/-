@@ -36,6 +36,8 @@ class Solution:
             cur.next = l1
         if l2:
             cur.next = l2
+        # alternative: if l1, cur.next = l1 else l2
+        # cur.next = l1 or l2
         return dummy.next
         
 # @lc code=end
