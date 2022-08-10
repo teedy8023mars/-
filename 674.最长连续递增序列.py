@@ -31,11 +31,10 @@ class Solution:
         for i in range(1,len(nums)):
             if nums[i]>nums[i-1]:
                 cur += 1
-                max_len = max(max_len,cur)
             else:
-                cur = 1
                 max_len = max(max_len,cur)
-        return max_len
+                cur = 1
+        return max(max_len,cur)
                 
                 
 # @lc code=end
