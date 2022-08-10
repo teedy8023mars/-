@@ -23,19 +23,20 @@ class Solution:
         #     l2.next = self.mergeTwoLists(l1, l2.next)
         #     return l2
         """iteratively"""
-        t1 = t2 = ListNode(0)
+        dummy = cur = ListNode(0)
         while l1 and l2:
             if l1.val<l2.val:
-                t2.next = l1
-                l1 = l1.next
+                cur.next = l1
+                l1 = l1.next 
             else:
-                t2.next = l2
-                l2 = l2.next
-            t2 = t2.next
-        # append the rest nodes of l1 or l2
-        t2.next = l1 or l2 
-        return t1.next
-
+                cur.next = l2
+                l2 = l2.next 
+            cur = cur.next 
+        if l1:
+            cur.next = l1
+        if l2:
+            cur.next = l2
+        return dummy.next
         
 # @lc code=end
 
