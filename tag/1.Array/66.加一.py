@@ -16,6 +16,7 @@ class Solution:
         # for i in a:
         #     b.append(int(i))
         # return b
+
         """solution 2:"""
         for i in range(len(digits)-1, -1, -1):
             digits[i] += 1
@@ -27,7 +28,4 @@ class Solution:
         digits = [0]*(len(digits)+1)
         digits[0] = 1
         return digits
-        
-            
 # @lc code=end
-
