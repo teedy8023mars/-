@@ -7,11 +7,11 @@
 # @lc code=start
 class Solution:
     def isSubsequence(self, s: str, t: str) -> bool:
-        if len(s)>len(t):return False
-        if len(s) == 0: return True
-        ret = 0
-        for i in range(0, len(t)):
-            if ret <= len(s) - 1 and s[ret]== t[i]:
-                    ret += 1
-        return ret==len(s)
+        if len(s)==0: return True
+        if len(s)>len(t):return False 
+        index = 0
+        for i in range(len(t)):
+            if index != len(s) and t[i] == s[index]:
+                index += 1
+        return index == len(s)
 # @lc code=end
