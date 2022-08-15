@@ -15,8 +15,6 @@ class Solution:
         for i in range(n):
             left = i + 1
             right = n - 1
-            if nums[i] > 0:
-                break
             if i >= 1 and nums[i] == nums[i - 1]:
                 continue
             while left < right:
