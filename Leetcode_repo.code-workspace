@@ -1,7 +1,8 @@
 {
-    "folders": [
-        {
-            "path": "."
-        }
-    ]
+	"folders": [
+		{
+			"name": "Leetcode_repo",
+			"path": "."
+		}
+	]
 }
