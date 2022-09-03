@@ -19,8 +19,4 @@ class Solution:
         # n=3
         dfs (n,0,0,"")
         return res
-
-
-
 # @lc code=end
-
